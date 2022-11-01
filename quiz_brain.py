@@ -11,6 +11,7 @@ class QuizBrain:
     def next_question(self):
         question = self.question_list[self.question_number]
         self.question_number += 1
+        print(f"Difficulty: {question.difficulty.title()}")
         user_answer = input(f"Q.{self.question_number}: {question.question}. (True/False)? ")
         self.check_answer(user_answer, question.answer)
 
